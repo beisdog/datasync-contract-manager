@@ -1,0 +1,28 @@
+
+<div>
+  <p-toolbar>
+    <div class="p-toolbar-group-left">
+      <i class="pi pi-bars" (click)="displaySidebar=!displaySidebar"></i>
+    </div>
+
+  </p-toolbar>
+  <p-sidebar [(visible)]="displaySidebar"
+             position="left">
+    <button pButton type="button" label="New" (click)="newPartner()" icon="pi pi-plus" class="p-button-secondary"></button>
+    <button pButton type="button" label="Reload" (click)="reload()" icon="pi pi-refresh" class="p-button-secondary"></button>
+
+    <div class="card flex justify-content-center">
+      <p-tree class="w-full md:w-30rem"
+              [value]="nodes"
+              [(selection)]="selectedContracts"
+              (onNodeSelect)="nodeSelect($event)"
+              selectionMode="single"></p-tree>
+    </div>
+  </p-sidebar>
+  <p-messages></p-messages>
+
+  <router-outlet></router-outlet>
+</div>
+
+
+

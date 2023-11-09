@@ -1,0 +1,60 @@
+<p-card header="Edit Partner">
+  <div class="p-fluid">
+    <div class="p-field">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" [(ngModel)]="partner.firstName" pInputText />
+    </div>
+    <div class="p-field">
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" [(ngModel)]="partner.lastName" pInputText />
+    </div>
+    <div class="p-field">
+      <label for="birthdate">Birthdate</label>
+      <p-calendar id="birthdate" [(ngModel)]="partner.birthdate" inputId="birthdate" dateFormat="yy-mm-dd"></p-calendar>
+    </div>
+    <div class="p-field">
+      <label>Addresses</label>
+      <p-table #tblAddresses [value]="addresses" responsiveLayout="scroll">
+
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Street</th>
+            <th>City</th>
+            <th>Zipcode</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-address>
+          <tr>
+            <td><input type="text" [(ngModel)]="address.street" pInputText /></td>
+            <td><input type="text" [(ngModel)]="address.city" pInputText /></td>
+            <td><input type="text" [(ngModel)]="address.zipcode" pInputText /></td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <div class="p-field">
+      <label>Contracts</label>
+      <p-table [value]="contracts" responsiveLayout="scroll">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Type</th>
+            <th>Title</th>
+            <th>Text</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-contract>
+          <tr>
+            <td><input type="text" [(ngModel)]="contract.type" pInputText /></td>
+            <td><input type="text" [(ngModel)]="contract.title" pInputText /></td>
+            <td><input type="text" [(ngModel)]="contract.text" pInputText /></td>
+
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+    <div class="p-field">
+      <button pButton type="button" label="Save" (click)="save()" icon="pi pi-check"></button>
+      <button pButton type="button" label="Delete" (click)="delete()" icon="pi pi-times" class="p-button-secondary"></button>
+    </div>
+  </div>
+</p-card>

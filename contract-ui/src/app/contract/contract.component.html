@@ -1,0 +1,24 @@
+<p-card header="Edit Contract {{displayName}}">
+  <div class="p-fluid">
+    <div class="p-field">
+      <label for="id">Id</label>
+      <input type="text" id="id" [(ngModel)]="contract.id" pInputText />
+    </div>
+    <div class="p-field">
+      <label for="type">Type</label>
+      <input type="text" id="type" [(ngModel)]="contract.type" pInputText />
+    </div>
+    <div class="p-field">
+      <label for="startdate">Birthdate</label>
+      <p-calendar id="startdate" [(ngModel)]="contract.startdate" inputId="startdate" dateFormat="yy-mm-dd"></p-calendar>
+    </div>
+    <div class="p-field">
+      <label for="text">Text</label>
+      <textarea id="text" pInputTextarea rows="5" cols="30" [(ngModel)]="contract.text"></textarea>
+    </div>
+    <div class="p-field">
+      <button pButton type="button" label="Save" (click)="save()" icon="pi pi-check"></button>
+      <button pButton type="button" label="delete" (click)="delete()" icon="pi pi-times" class="p-button-secondary"></button>
+    </div>
+  </div>
+</p-card>
