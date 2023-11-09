@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<title>Release Notes</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite::before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+:not(pre)>code.nobreak{word-wrap:normal}
+:not(pre)>code.nowrap{white-space:nowrap}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
+table.tableblock{max-width:100%;border-collapse:separate}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="book">
+<div id="header">
+<h1>Release Notes</h1>
+<div class="details">
+<span id="revnumber">version 3.14.10</span>
+</div>
+</div>
+<div id="content">
+<div class="sect1">
+<h2 id="_overview">Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>SymmetricDS 3.14 release includes 17 features, 104 improvements, and 167 bug fixes.</p>
+</div>
+<div class="sect2">
+<h3 id="_security_fixes">Security Fixes</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 70%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Issue</th>
+<th class="tableblock halign-left valign-top">Summary</th>
+<th class="tableblock halign-left valign-top">Severity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.symmetricds.org/issues/view.php?id=5351">5351</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Use PKCS12 for keystore by default</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.symmetricds.org/issues/view.php?id=5376">5376</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parameter to disable logging of application data from a batch error</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.symmetricds.org/issues/view.php?id=5542">5542</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Apache commons-text version 1.9 security vulnerability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_performance_fixes">Performance Fixes</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 70%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Issue</th>
+<th class="tableblock halign-left valign-top">Summary</th>
+<th class="tableblock halign-left valign-top">Severity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.symmetricds.org/issues/view.php?id=5210">5210</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Routing reader may use multiple queries for a large number of gaps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Medium</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_whats_new">What&#8217;s New</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_operational_improvements">Operational Improvements</h3>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p>For large deployments, new endpoints can be scheduled to register automatically.
+Registration works across push links, in addition to pull links.
+Initial loads can now be monitored at the endpoint with the same level of detail that was previously only available at the source.
+Creation of tables now includes fractional second precision of time and timestamp columns.
+Routing query performance was improved when a large number of gaps is present.
+SQL-Server and Sybase trigger procedures were optimized for the case of a primary key changing, and a parameter
+of trigger.use.insert.delete.for.primary.key.changes was added to revert to the old behavior.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_issues">Issues</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_new_features">New Features</h3>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.0</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5178">5178</a> - Push registration to nodes when group links indicate push<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5180">5180</a> - Schedule registration of a node for a window of time</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.1</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5389">5389</a> - Implement conflict_win_count and conflict_lose_count columns in sym_outgoing_batch and sym_incoming_batch</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.2</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5427">5427</a> - Creating a Parameter That, Upon Registration, Will Automatically Create A Group Link Between Nodes if None Exist</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.3</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3313">3313</a> - Propagate default GUID from MSSQL to SQLITE<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5524">5524</a> - Adding New Monitor Types For OS Load Average and OS Open File Handles<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5551">5551</a> - Add parameters that specify how to sync default values<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5570">5570</a> - Add engine name and server name variables to notification templates</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.4</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5652">5652</a> - Improve SQL Server DDL triggers and add DDL triggers for Oracle and Postgres</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.7</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5757">5757</a> - Add server parameter for setting a server&#8217;s cookie name<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5774">5774</a> - Support for capturing the row identifier on various platforms if available (default is false)<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5775">5775</a> - File sync batches to provide file name as the summary in outgoing and incoming batch.<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5800">5800</a> - Add a gradle task that generates javadoc and publishes it to the website</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.8</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5863">5863</a> - Add option to send additional batch error notifications when the number of batches in error increases<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5884">5884</a> - Add job monitor<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5885">5885</a> - MSSQL support for hierarchyid data types</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.9</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=1180">1180</a> - Add option to symadmin --send-sql to specify a file containing the sql to send.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_improvements">Improvements</h3>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.0</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=2972">2972</a> - Registration order of nodes should not matter<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3941">3941</a> - Data gap route reader could use multiple queries when exceeding max gaps<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4723">4723</a> - Send column with Oracle DATE type to PostgreSQL<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4724">4724</a> - Send column with timestamp datatype from PostgreSQL to PostgreSQL<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5138">5138</a> - Build a cache manager to centralize the handling of data caches<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5157">5157</a> - Sybase and SQL Server update trigger should be made more efficient generating sym_data records when primary keys are changed<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5198">5198</a> - Clean up the consistent use of table constants for registration, trigger installation, extract, and export<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5203">5203</a> - Sync incoming load details to target node (table_reload_status, extract_request)<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5210">5210</a> - Routing reader may use multiple queries for a large number of gaps<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5238">5238</a> - Bulk loaders should report missing table<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5265">5265</a> - Update drivers, modules, and libraries<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5269">5269</a> - Variables of source catalog/schema names for use in target catalog/schema fields in routing<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5278">5278</a> - Alphabetize list of tables in user guide<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5280">5280</a> - Table DDL with timestamp and fractional second precision<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5309">5309</a> - Prepare for Gradle upgrade to version 8<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5351">5351</a> - Use PKCS12 for keystore by default<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5353">5353</a> - Add gpg code signing to jar files<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5364">5364</a> - Always execute shutdown hooks, even for embedded and war deployments<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5376">5376</a> - Parameter to disable logging of application data from a batch error</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.1</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=140">140</a> - Check to see that the SymmetricDS tables are created to use the Innodb storage engine on MySQL.<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5415">5415</a> - Detection of MSSQL Azure Managed Instance<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5416">5416</a> - Allow users to disable spatial data type support functions</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.2</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5431">5431</a> - Install triggers on registration server before configuration is complete<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5433">5433</a> - Sync triggers when parameters change that affect triggers<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5440">5440</a> - Change parameter treat.binary.as.lob.enabled to default to false<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5449">5449</a> - Add SOURCE_NODE_ID_FROM_DATA to VariableColumnTransform to allow using the source_node_id from the data<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5450">5450</a> - Routing default batch algorithm protection against large transactions<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5453">5453</a> - Backup keystore before saving it<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5459">5459</a> - Adding Log Info For Queries for Lookup Table Routers<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5464">5464</a> - Parameter to use old conflict pk detect and fallback<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5476">5476</a> - Ability to disable sync triggers when sync on incoming is enabled<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5481">5481</a> - Cast TEXT types in MS SQL to VARCHAR for SymmetricDS tables<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5483">5483</a> - Cast TEXT to VARCHAR for all tables<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5486">5486</a> - Ignore missing tables on config channel<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5487">5487</a> - Support snapshot fixes<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5492">5492</a> - Table reload request with "where" keyword gets error<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5496">5496</a> - Cast varchar to nvarchar<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=765">765</a> - dbexport / dbimport should support oracle virtual columns</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.3</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=1960">1960</a> - Service start script always waits for 5s<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5515">5515</a> - When installing service for systemd, make sure to specify absolute path to java executable when creating systemd control file<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5519">5519</a> - Updating KafkaDataWriter to work with Filters<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5520">5520</a> - Acknowledgement gets null SQL message<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5526">5526</a> - Default max batch to send as 10<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5535">5535</a> - Improve how default values are handled when syncing DDL cross-platform<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5536">5536</a> - Add support for Postgres' inet, cidr, macaddr and macaddr8 data types<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5547">5547</a> - Treat any default value that contains "()" as a function<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5553">5553</a> - Allow spaces in values within value map column transform expression<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5558">5558</a> - Create table without defaults if in error<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5563">5563</a> - Add functionality to symadmin export-sym-tables to export alters when upgrading<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5583">5583</a> - Service wrapper wait for "started" message instead of 5 second timeout<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5604">5604</a> - Check sync URL ends with engine name<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5605">5605</a> - Parameter that alters table case should be for cross platform only<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5606">5606</a> - CPU monitor top threads should ignore threads waiting on I/O</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.4</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4424">4424</a> - Log monitor fails to insert because of duplicate key when logs are shared across instances of a node<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5610">5610</a> - SqlAnywhere support for v. 12  and higher<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5630">5630</a> - When deleting FK child rows during conflict resolution and old_data is null, query for the parent row on the target<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5631">5631</a> - Full load request does not support a reload select statement<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5648">5648</a> - Add "open registration" call to REST service<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5650">5650</a> - Problems replicating DDL to another node with the same database type but different database version</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.5</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5636">5636</a> - Only cancel a full load in progress if the reload select is empty<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5662">5662</a> - Snapshot util too slow for large multi-tenant deployment<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5663">5663</a> - Add table reload request to REST service<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5671">5671</a> - Bring back java routers<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5673">5673</a> - Sync triggers fails with deadlock on SQL-Server<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5675">5675</a> - Bidirectional sync causes need for trigger to be re-built on target side if table does not exist</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.6</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5720">5720</a> - sym_node trigger should capture changes even if auto.sync.configuration is set to false<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5728">5728</a> - AbstractSymmetricEngine.isConfigured() should use the cache when querying for sym_node table<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5742">5742</a> - Table sorting does not need to include sym tables<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5747">5747</a> - Read max-size VARCHAR columns as LONGVARCHAR columns on H2</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.7</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5752">5752</a> - Add support for H2 2.x<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5753">5753</a> - Reopening registration should reset the failed login count<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5765">5765</a> - Add quotation marks around values in threads-stats.csv file in support snapshot<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5779">5779</a> - Improve docs on db.init.sql property<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5780">5780</a> - Slow routing when using $(targetExternalId) variable<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5782">5782</a> - Unique Index with Multiple Nulls not Properly Handled for Certain Databases<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5783">5783</a> - SymmetricDS seems to require Postgres 11, but the docs don&#8217;t reflect that<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5790">5790</a> - Failed to decrypt node password from lost secret key in keystore<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5805">5805</a> - Allow specification of database platform of symmetric when DbDxport execution with load only/extract only/log miner<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5810">5810</a> - Redshift Bulk Loader increased versioning and dependencies<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5815">5815</a> - DDL Capture Changes - Three enhancements to DDL trigger capture<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5817">5817</a> - Snapshot util not returning<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5823">5823</a> - Capture timings when running Sync Triggers<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5831">5831</a> - Sync triggers by $(targetExternalId) and call after registration</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.8</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=2260">2260</a> - Also sync the stored procedures with the schema<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3476">3476</a> - When a node is unregistered cancel all jobs / threads that are actively doing work for that node<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5565">5565</a> - Adding Character Set to Snapshot<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5812">5812</a> - MathColumnTransform uses Evaluator that is not thread-safe<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5836">5836</a> - Specify jaxb api and implementation so that libraries will be available when running in Java 8 through 17<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5847">5847</a> - Try again when foreign key correction fails<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5853">5853</a> - sym_monitor_event trigger should capture changes when monitor.events.capture.enabled=true even if auto.sync.configuration=false<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5869">5869</a> - Improve documentation of sym_node_group_link.sync_config_enabled<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5873">5873</a> - Open Registration in Rest API doesn&#8217;t allow user to specify node if 2 nodes have the same external ID<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5886">5886</a> - Monitor enhancements for centralized support<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5893">5893</a> - DbCompare should write to standard error and not continue with an invalid date-time format<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5907">5907</a> - Postgres support for ddl table creations with a default function on a GUID from MSSQL<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5909">5909</a> - Some methods are synchronized unnecessarily in AbstractParameterService<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5922">5922</a> - Added debug logging to File Sync Trigger Tracker<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=706">706</a> - Make sleep time between registration retries configurable</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.9</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=1063">1063</a> - Add export-config and import-config command line options to symadmin<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5921">5921</a> - Adding Uni* type support to Sybase ASE<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5932">5932</a> - Update docs on using environment variables in engines properties (modified summary)<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5937">5937</a> - SymmetricDS User Guide Incorrectly Referencing Table Column Name Which Dropped From 3.14 Release Already<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5944">5944</a> - Adding log info for subselect routers<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5960">5960</a> - Add support for NTEXT to SQLAnywhere dialect</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bug_fixes">Bug Fixes</h3>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.0</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=2180">2180</a> - H2 timestamp format creates conflict against ORACLE timestamp format<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=2254">2254</a> - sym_outgoing_batch and sym_incoming_batch should both use the same time for last_update_time and create_time<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=2261">2261</a> - Schema from Postgres outputs TIMESTAMPTZ that is not compatible with other databases<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3724">3724</a> - Conflict detection with Timestamps between DB2 and Derby<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3778">3778</a> - Send table fails when sending H2 Timestamp to MySQL<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3962">3962</a> - Oracle&#8217;s TIMESTAMP with Time Zone doesn&#8217;t map to MariaDB<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3963">3963</a> - char(n) and nchar(n) where n&gt;255 is valid in oracle but maps to invalid types in MariaDB<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4298">4298</a> - Sycing schemas from MSSQL with column type CHAR(400) to MySQL fails<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4525">4525</a> - Database name with special character like minus sign, fails to create trigger<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5122">5122</a> - Wrong conversion from mssql datetime(7) to mysql/mariadb<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5239">5239</a> - Conflict resolution doesn&#8217;t work if timestamp is in PK and different fractional second precision between databases<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5243">5243</a> - Change documentation on outgoing batch errors to set the status to 'IG' instead of 'OK' so target will get notified<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5304">5304</a> - Snapshot Fails to Find SingleStore Enum<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5305">5305</a> - SingleStore Snapshot: Failed to execute SQL Error<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5306">5306</a> - SingleStore Snapshot: 'Table 'sym_outgoing_batch' doesn&#8217;t exist'<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5308">5308</a> - Unable to Retrieve Database Time for Load-Only and Log-Based</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.1</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=1282">1282</a> - MySQL outputs schema with DEFAULT '0000-00-00' that is not compatible<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=1421">1421</a> - DbFill error arithmetic overflow error with money data type<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=1453">1453</a> - sym tables created in mysql should use innodb engine<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=2821">2821</a> - dbcompare attempts to insert null into "not null default &#8230;&#8203;" field<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3419">3419</a> - MS SQL &#8594; SQLite, don&#8217;t translate "NEXT VALUE FOR" default value<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3960">3960</a> - NVARCHAR2() maps incorrectly to VARCHAR() when mapping from Oracle to MariaDB<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3961">3961</a> - Oracle XMLTYPE incorrectly mapped to invalid SQL Type SQLXML in MariaDB<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3964">3964</a> - Oracle&#8217;s REAL datatype should map to DOUBLE in MariaDB, not FLOAT<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3965">3965</a> - Oracle&#8217;s LONG type is incorrectly mapped to MariaDB&#8217;s MEDIUMTEXT.  Should be LONGTEXT<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3966">3966</a> - Oracle&#8217;s CLOB (and NCLOB) type incorrectly maps to MariaDB&#8217;s MEDIUMTEXT<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3999">3999</a> - Unable to translate default column for (new sequentialid()) (very easy fix)<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4001">4001</a> - Default value being passed as string for MS Sql Server<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4090">4090</a> - Firebird ddl/schema problem when creating tables and deferring constraints<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4134">4134</a> - DB Compare does not handle Oracle Timestamp with LOCAL time zone columns properly<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4191">4191</a> - dbexport: MSSQL geometry &#8594; PGSQL varchar(2147483647); better would be TEXT<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4217">4217</a> - Does not replicate index with upper function on PostgreSQL<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4359">4359</a> - The handling of ''(empty string) default value of varchar columns  of dbexport and dbimport is not correct for mssql server<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4567">4567</a> - sync.table.prefix parameter ignores for sequence in PostgreSQL<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4667">4667</a> - dbcompare prints each table multiple times<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5106">5106</a> - The PostgreSQL database cannot be synchronized under the USE_CHANGED_DATA  and manual resolution strategy<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5385">5385</a> - Snapshots do not contain log files when the files are in a non-default location specified in log4j2.xml<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5388">5388</a> - Initial load delete or truncate with table transform<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5393">5393</a> - MySqlDdlReader.getTriggers() throws SQLException when MySQL database name contains special character<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5395">5395</a> - H2 database (or load only database) gets alter timestamp(0) every time starting<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5406">5406</a> - Deleting a trigger doesn&#8217;t inactivate its sym_trigger_hist entry when auto.sync.triggers.after.config.change=true<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5413">5413</a> - Bulk loaded flag is not being read from database for incoming and outgoing services<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5414">5414</a> - JDBC Bulk Transactions Fallback While Using PostgreSQL<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5417">5417</a> - Fix NPE for conflict detection when table does not have a PK and all columns used including those with null values<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5421">5421</a> - Initial load won&#8217;t start if registration_enabled is 1<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5425">5425</a> - Tables not created on reverse initial load</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.2</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=1753">1753</a> - Default values that are functions do not work while creating tables in MySQL<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3251">3251</a> - Mysql BIGINT UNSIGNED processed as signed and gives error on larger than 63 bits numbers.<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3845">3845</a> - Primary key constraint violation while replicating single table from MSSQL 2017 into PostgreSQL 9.6<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4116">4116</a> - Syncing from Time to Timestamp (or vice versa) in Postgres produced inaccurate values<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4295">4295</a> - Detect when the order of a primary key changes in order to regenerate it<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4335">4335</a> - Multiple transform_table rows per source table cause multiplication of rows in outgoing batch<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4514">4514</a> - DbCompare: The output script to fix issues on the target does not support null values.<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5392">5392</a> - Unable to write to sym_outgoing_batch when using Postgres<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5430">5430</a> - Android not implemented exception when sym_monitor syncs<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5435">5435</a> - NumberFormatException when querying for an integer greater than Long.MAX_VALUE in SQL Explorer<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5436">5436</a> - Sybase ASE issues when upgrading SymmetricDS from an older version to 3.14.*<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5439">5439</a> - Conflict resolver fails if there are no primary keys on the target and it is set to not use primary keys from source<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5441">5441</a> - Windows service won&#8217;t start if tmp dir has trailing slash<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5460">5460</a> - Cannot write to more than one Kafka instance in a single instance of SymmetricDS<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5472">5472</a> - When a load filter changes catalog or schema the DML statement is not recreated with the updated values<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5477">5477</a> - Some default values do not sync correctly from Oracle to Oracle<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5495">5495</a> - Batch error missing method sendMissingForeignKeyRowsForLoad<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5497">5497</a> - NPE when running DbFill on a table with a foreign key that references a table in another catalog or schema<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5501">5501</a> - Registration left pending when client is 3.12 or newer and server is 3.11 or older<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5502">5502</a> - Fix json deserialization issue with log summary object<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5503">5503</a> - New config tables are being routed to old nodes<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5504">5504</a> - Oracle DATE type should not have its size specified<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5505">5505</a> - Oracle TO_TIMESTAMP() function gets surrounded by quotes when imported as a default value<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=922">922</a> - Float used on table without primary causes update to not capture</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.3</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3109">3109</a> - File replication routing job fails with error message when channel is not a file sync channel - needs better error message<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3545">3545</a> - Mapped default values lead to always detecting a model change<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5456">5456</a> - ORA-24816 when sync varchar2(4000) and long in same table<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5463">5463</a> - Initial load of a table with a self referencing FK will not load if out of order<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5507">5507</a> - Postgres LOCALTIMESTAMP function gets surrounded by quotes when imported as a default value<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5510">5510</a> - Multiple active trigger history for same table<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5511">5511</a> - Error request path not supported for /server/config<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5512">5512</a> - Default values for Oracle RAW columns get surrounded by quotes when exported<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5513">5513</a> - SQL Server GETDATE() and GETUTCDATE() functions get surrounded by quotes when imported as default values<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5514">5514</a> - SQL Server sysname type should not have its size specified<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5523">5523</a> - Create trigger hist if routing can&#8217;t find it<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5529">5529</a> - Cannot set up SQL Server log-based replication without "ALTER ANY DATABASE" permission<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5531">5531</a> - Multi-homed clustered nodes stuck in loop of retry and resend of batches<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5542">5542</a> - Apache commons-text version 1.9 security vulnerability<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5544">5544</a> - Initial load error on MySQL with parameter db.treat.date.time.as.varchar.enabled=true<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5554">5554</a> - Example 25 in User Guide is missing permissions<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5557">5557</a> - SQL-Server capture rows that exceed 4000 characters<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5560">5560</a> - ORA-06502: PL/SQL: numeric or value error: character string buffer too small<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5571">5571</a> - Unique index on function causes error when resolving a conflict<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5580">5580</a> - Script error from newer wins conflict resolution with old nodes<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5582">5582</a> - Database Platforms That Don&#8217;t Support SQL Queries Throw Error with SQL Explorer<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5586">5586</a> - Trigger creation fails when 2 new triggers have trigger IDs that are identical when shortened<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5596">5596</a> - Failure to Flush when using ConvertToReload router.<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5603">5603</a> - Parse exception of batch should remove it from staging</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.4</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5597">5597</a> - SymDS is not syncing specific record during initial load<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5611">5611</a> - Check sync URL ends with engine name or "sync"<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5619">5619</a> - Insert statements generated by DBExport contain question marks when there are null values<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5624">5624</a> - Deletes get ignored when foreign key children exist but cannot be found<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5625">5625</a> - Stack overflow while extracting batch containing a table removed from replication<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5635">5635</a> - Single Store extends MySQL dialect but does not need to check for an "innodb" engine<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5638">5638</a> - Flush cache of routers when a router is changed<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5640">5640</a> - Filtering transactions for snapshot gets stack overflow error and never finishes creating snapshot<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5645">5645</a> - Registration redirect URL does not have query parameters for older versions of SymmetricDS clients<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5646">5646</a> - DBExport incorrectly formats time data<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5655">5655</a> - sym_node_host trigger should capture changes even if auto.sync.configuration is set to false</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.5</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5593">5593</a> - Incorrect Logic in various DDLBuilders for Processing Changes<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5598">5598</a> - Sql Anywhere Drop Trigger<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5664">5664</a> - Tables are altered incorrectly on some platforms when their columns need to be made required or non-required<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5679">5679</a> - Extract fails with durationMillis must not be negative<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5686">5686</a> - MariaDB JDBC Driver version 3 does not support a negative fetch size to indicate the use of streaming<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5692">5692</a> - Pulling corrupted batch gets null pointer in loop<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5693">5693</a> - Fix multiple active trigger histories before sync triggers is run</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.6</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=3952">3952</a> - Order table creation by foreign key dependency<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5657">5657</a> - SQLAnywhere CHAR is really a VARCHAR and should be mapped to VARCHAR for other dialects<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5698">5698</a> - Data truncation error when inserting/updating log event in sym_monitor_event on Interbase<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5699">5699</a> - Missing image in Manage Nodes Load Data Where Clauses<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5700">5700</a> - Grammar error (double word) in Manage Logging documentation<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5702">5702</a> - Missing image in Manage Incoming Loads<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5708">5708</a> - Sync table  struct to target node report an error<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5711">5711</a> - When connecting to Azure, set platform version to SQL Server 2016<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5718">5718</a> - SQL Server DDL Builder needs to handle objects in different databases<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5721">5721</a> - Query tries to address mixed-case column without quotes (Postgres)<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5722">5722</a> - Tries to create foreign key before creating the referenced table<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5723">5723</a> - The schema of the table that is being created is used instead of correct one when creating a foreign key<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5724">5724</a> - SQL Server timestamp (rowversion) data type can not specify column size<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5729">5729</a> - DBImport- Allow the UI specification of the catalog and schema to override the catalog and schema specs in XML imported file<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5731">5731</a> - Functional indexes are only supported by Oracle<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5737">5737</a> - Serve Time Offsets Causing an Error in Determining if a Node is Offline<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5746">5746</a> - When upgrading from a varchar(xxx) to longvarchar the change isn&#8217;t detected on H2</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.7</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4310">4310</a> - Replicating to postgres to postgres timestamp with default<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5706">5706</a> - "Data type unknown" error when updating sym_extract_request on Interbase<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5766">5766</a> - NPE when inserting into sym_incoming_batch on some platforms<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5781">5781</a> - DBCompare --use-sym-config true<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5791">5791</a> - Allow registration of other nodes after registration and initial load is complete<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5799">5799</a> - 3 tier deployment, 3rd tier does not get top level tier sym_node* tables<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5802">5802</a> - SQL Server and Sybase stream row on updates trigger syntax issue<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5803">5803</a> - Interbase fixes: failing to have prepared statement indicators in set and select portion of SQL statements<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5807">5807</a> - Sybase ASE gets Misinterpreted as Sybase SQL Anywhere<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5809">5809</a> - NullPointerException when writing a delete to Kafka when old data has not been captured<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5811">5811</a> - When Capture of Old Data is disabled, Deletes get an Index Out Of Bounds Error with Kafka<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5822">5822</a> - SQL Server create or alter trigger fails when table is not in default schema (dbo)<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5826">5826</a> - Data can become misaligned with column names during extraction after a column gets renamed<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5828">5828</a> - Class Not Found Exception when connecting to Redshift</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.8</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4151">4151</a> - MSSQL DDL ERROR: View / function / stored procedure<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=4952">4952</a> - Cannot resolve monitors of type log<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5314">5314</a> - Infinite synchronization loop when 3 nodes are connected to each other and sync_on_incoming_batch = 1<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5834">5834</a> - Unnamed constraint causes alter table error<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5848">5848</a> - Security Vulnerbility in Spring Framework<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5865">5865</a> - Estimated count from initial load does not work with SqlServer when using different schema than dbo<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5867">5867</a> - Prevent file sync from syncing all files when first scanning a directory when initial load is enabled<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5880">5880</a> - Transform documentation missing Java Column Transform Type<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5892">5892</a> - DbCompare fails to write comparison SQL for timestamp with timezone values<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5894">5894</a> - NotificationTypeEmail&#8217;s deserializeOfflineNodes method always returns empty collection<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5897">5897</a> - ValidatorException while validating self-signed X509 certificate<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5901">5901</a> - DBCompare produces output SQL with invalid syntax<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5903">5903</a> - Failing to create trigger on table<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5904">5904</a> - LOB data does not sync when sending a load with use_stream_lobs=1<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5906">5906</a> - Non transactional initial load setup can cause load events to be missed ini table_reload_status<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5913">5913</a> - Update postgres documentation on how to give access to schemas for a SymmetricDS user<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5915">5915</a> - Cannot Install swaggerui module by using symadmin ModuleManager</p>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="content">
+<div class="paragraph">
+<p><strong>3.14.9</strong><br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5931">5931</a> - log.slow.sql.threshold.millis and log.sql.parameters.inline parameters do not work and are not documented<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5934">5934</a> - Getting null pointer from Column.java in new method anyPlatformColumnTypeContains on platformColumns<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5935">5935</a> - Failed to execute IHeartbeatListener PushHeartbeatListener java.lang.NullPointerException When Starting up SymmetricDS<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5942">5942</a> - SQLAnywhere DDL problems with dropping indexes and triggers, and trigger syntax issue for version 11 and earlier<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5948">5948</a> - KafkaDataWriter by ROW method has a trailing comma<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5955">5955</a> - Sybase Anywhere - channel_id size Problem on auto-create triggers<br>
+<a href="https://www.symmetricds.org/issues/view.php?id=5961">5961</a> - SQL Anywhere long varbit values are inconsistent between change data capture and initial load</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tables">Tables</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were made to the definition of configuration and runtime tables. Table changes are applied to the database automatically using data definition language (DDL) during startup.</p>
+</div>
+<div class="sect2">
+<h3 id="_new_columns">New Columns</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title"><strong>SYM_EXTRACT_REQUEST</strong></caption>
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Column Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>source_node_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique identifier for the node that will be the source of the extract.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title"><strong>SYM_INCOMING_BATCH</strong></caption>
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Column Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bulk_loader_flag</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A flag that indicates that this batch did or did not use the bulk loader.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title"><strong>SYM_JOB</strong></caption>
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Column Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>is_clustered</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether to acquire a cluster lock or not.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title"><strong>SYM_NODE</strong></caption>
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Column Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>batch_last_successful</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The last incoming or outgoing batch that was marked OK that is not on the config, heartbeat, or monitor channels.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data_rows_to_send_count</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The number of of rows to replicated in batches.  This field is updated as part of the heartbeat job if the heartbeat.update.node.with.batch.status property is set to true.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>data_rows_loaded_count</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The number of rows that has been successfully replicated since last purge.  This field is updated as part of the heartbeat job if the heartbeat.update.node.with.batch.status property is set to true.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>oldest_load_time</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The oldest recorded sync time since the last purge.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>most_recent_active_table</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The most active table to sync recently (time based on last 5 minutes and doubles until a match is found or until 80 min.))</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>purge_outgoing_last_run_ms</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The number of milliseconds that the purge job took on the last run.  This field is updated as part of the heartbeat job if the heartbeat.update.node.with.batch.status property is set to true.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>purge_outgoing_last_finish</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The time the purge outgoing last finished succesfully.  This field is updated as part of the heartbeat job if the heartbeat.update.node.with.batch.status property is set to true.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>purge_outgoing_average_ms</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The average time the purge outgoing has been run.  This field is updated as part of the heartbeat job if the heartbeat.update.node.with.batch.status property is set to true.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>routing_last_run_ms</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The time it took for the the last routing job to finish succesfully.  This field is updated as part of the heartbeat job if the heartbeat.update.node.with.batch.status property is set to true.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>routing_last_finish</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The time the routing job last finished succesfully.  This field is updated as part of the heartbeat job if the heartbeat.update.node.with.batch.status property is set to true.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>routing_average_run_ms</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The number of milliseconds that the routing job averages.  This field is updated as part of the heartbeat job if the heartbeat.update.node.with.batch.status property is set to true.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>sym_data_size</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The current size of the sym_data table.  This field is updated as part of the heartbeat job if the heartbeat.update.node.with.batch.status property is set to true.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title"><strong>SYM_NODE_HOST_JOB_STATS</strong></caption>
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Column Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>error_flag</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A flag that indicates that this job was in error.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>error_message</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The error message that occurred.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title"><strong>SYM_NODE_SECURITY</strong></caption>
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Column Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>registration_not_before</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allow registration beginning at this timestamp.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>registration_not_after</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Allow registration until this timestamp.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title"><strong>SYM_OUTGOING_BATCH</strong></caption>
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Column Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bulk_loader_flag</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A flag that indicates that this batch did or did not use the bulk loader.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title"><strong>SYM_TABLE_RELOAD_STATUS</strong></caption>
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Column Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>error_batch_id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The batch ID that is in error when the error_flag is 1.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>batch_bulk_load_count</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The number of batches that were loaded with the bulk loader.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title"><strong>SYM_TRIGGER_HIST</strong></caption>
+<colgroup>
+<col style="width: 40%;">
+<col style="width: 60%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Column Name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>is_missing_pk</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Indicates whether the source table is missing a primary key.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_modified_tables">Modified Tables</h3>
+<div class="ulist">
+<div class="title"><strong>SYM_EXTRACT_REQUEST</strong></div>
+<ul>
+<li>
+<p>Added primary keys: <code>source_node_id</code></p>
+</li>
+<li>
+<p>Added index <code>idx_er_ld_src_nd</code> (<code>load_id</code>, <code>source_node_id</code>)</p>
+</li>
+<li>
+<p>Added index <code>idx_er_src_nd_st</code> (<code>source_node_id</code>, <code>status</code>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_parameters">Parameters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following changes were made to add new parameters, modify their default value, modify their description, or remove them from use.</p>
+</div>
+<div class="sect2">
+<h3 id="_new_parameters">New Parameters</h3>
+<div class="paragraph">
+<div class="title"><strong>auto.reload.use.config</strong></div>
+<p>If this is true, a reload will use configuration to determine which nodes to send a load to.  Default will send to the load to the node it regiestered (Default: false)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>auto.resolve.unique.index.ignore.null.values</strong></div>
+<p>If this is true, when a batch receives a unique index violation, the blocking rows for each unique index will only be deleted if the unique index has a value that is not null. (Default: true)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>cloud.bulk.codepage</strong></div>
+<p>The cloud based codepage to use for bulk insert if supported by vendor and version (Default:  )</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>cloud.bulk.field.quote</strong></div>
+<p>The cloud based character used in bulk loading to be used when quoting fields (Default: �)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>cloud.bulk.field.terminator</strong></div>
+<p>The cloud based terminator used in bulk loading to separate each field (Default: |)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>cloud.bulk.row.terminator</strong></div>
+<p>The cloud based terminator used in bulk loading to be used for a new row (Default:
+)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>conflict.default.pk.with.fallback</strong></div>
+<p>When enabled, the default conflict detection uses the primary key and the resolution uses fallback, which was the original default in version 3.11 and older.  This is a convenient way to go back to the old default without having to configure a conflict on each group link. (Default: false)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>data.create_time.timezone</strong></div>
+<p>Specify the timezone for the create_time value on sym_data when changes are captured. Only implemented for Oracle, Tibero, and PostgreSQL currently. (Default: )</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>data.flush.jdbc.batch.size</strong></div>
+<p>Flush size for JDBC batch mode used by services to save configuration. (Default: 10000)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>dataloader.create.table.without.defaults.on.error</strong></div>
+<p>If set to true, when a table creation fails on a database platform that is different than the source database, try to create the table without default values. (Default: true)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>dataloader.ignore.sql.event.errors</strong></div>
+<p>Indicate that the data loader should ignore errors while loading a SQL event and the execution of the statement fails. (Default: false)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>dataloader.log.sql.params.on.error</strong></div>
+<p>Indicate that the data loader should log SQL parameter values when a batch fails, which can be helpful for debugging.  Since SQL parameters will contain application data, some sites may need to turn this off for policy compliance. (Default: true)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>default.values.to.leave.unquoted</strong></div>
+<p>A list of default values in CSV format that should not be quoted when synchronized from another node. (Default: )</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>default.values.to.translate</strong></div>
+<p>A list of pairs of default values in CSV format that tells SymmetricDS to translate the first value to the second value when synchronized from another node. (Default: )</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>log.slow.sql.threshold.millis</strong></div>
+<p>Defines the number of milliseconds before logging that a query is slow. (Default: 20000)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>log.sql.parameters.inline</strong></div>
+<p>Defines whether the logging of SQL statements include the values inline or not. (Default: true)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>mssql.bulk.load.bcp.cmd</strong></div>
+<p>Specifies the path to the SQL Server bulk copy program utility (bcp) executable. (Default: )</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>mssql.bulk.load.use.bcp</strong></div>
+<p>Enables the use of the SQL Server bulk copy program utility (bcp) as the bulk loader. (Default: false)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>mssql.use.snapshot.isolation</strong></div>
+<p>Specifies if snapshot isolation should be automatically turned on. (Default: false)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>mssql.use.varchar.for.lob.in.sync</strong></div>
+<p>Use varchar(max) or nvarchar(max) when a column in SymmetricDS tables is set to long or nlong. This is for example necessary when using a _UTF8 of _SC collation. (Default: false)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>opensearch.load.aws.access.key</strong></div>
+<p>The AWS secret access key (aws_secret_access_key) to use as credentials for uploading to S3 (Default: )</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>opensearch.load.aws.secret.key</strong></div>
+<p>The AWS secret access key (aws_secret_access_key) to use as credentials for uploading to S3 (Default: )</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>registration.auto.create.group.link</strong></div>
+<p>When this is set to true a group link will be created by default between two groups even if the user does not explicitly set one up. (Default: true)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>registration.max.time.between.retries</strong></div>
+<p>The maximum time (in seconds) between node registration retries. (Default: 30)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>registration.push.config.allowed</strong></div>
+<p>When group link is configured to push to clients, allow registration to work over push. Useful when client cannot reach server, so server pushes registration to client. (Default: true)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>routing.data.reader.use.multiple.queries</strong></div>
+<p>Routing reader may run multiple queries for data, with each query including the maximum number of data gaps as specified by the routing.max.gaps.to.qualify.in.sql parameter.  This method attempts to use the table&#8217;s index for quick results and avoid wasting time on filtering rows that were already routed (as used by the greater.than.query method). (Default: true)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>routing.lock.timeout.ms</strong></div>
+<p>The amount of time a single routing worker node_communication lock will timeout after. (Default: 7200000)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>routing.max.batch.size.exceed.percent</strong></div>
+<p>The percentage of the channel&#8217;s max batch size that a batch can exceed when seeking a transaction boundary using the default batch algorithm.  Use zero to indicate that the batch size can grow as large as needed to include the complete transaction.  For example, a setting of 100 percent with a channel&#8217;s max batch size of 1000 allows a batch size of 2000 to be routed before it will be forced as complete.  This setting protects from a large transaction that causes batch sizes that far exceed the channel&#8217;s max size and have trouble loading on the target database. (Default: 100)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>routing.thread.per.server.count</strong></div>
+<p>The number of threads created that will be used to route channels concurrently on one server in the cluster. (Default: 5)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>routing.use.channel.threads</strong></div>
+<p>When enabled, use a thread per channel for parallel routing. (Default: false)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>snapshot.max.batches</strong></div>
+<p>Max number of batches to write to statistics listing for support snapshot. (Default: 10000)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>snapshot.max.files</strong></div>
+<p>Max number of files to write in directory listing for support snapshot. (Default: 50000)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>snapshot.max.node.channels</strong></div>
+<p>Max number of nodes and channels for batch statistics, after which it will group by node only. (Default: 5000)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>snapshot.operation.timeout.ms</strong></div>
+<p>Max time for a snapshot operation to complete, such as gathering table definitions, before it will be interrupted so the snapshot completes in a reasonable amount of time. (Default: 30000)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>spatial.data.types.enabled</strong></div>
+<p>Determines if spatial data type functions will be installed.   By default they will be installed but can be set to false to not install the additional spatial functions if they are not needed. (Default: true)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>sybase.ase.convert.unitypes.for.sync</strong></div>
+<p>Converts unitypes in Sybase ASE to the corresponding type in the target database. (Default: false)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>sync.triggers.fix.duplicate.active.trigger.histories</strong></div>
+<p>Whether or not duplicate active trigger histories will be detected and fixed so that the most recent will end up being the only active trigger history. (Default: true)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>sync.triggers.reg.svr.install.without.config</strong></div>
+<p>Whether or not sync triggers job will install triggers on a registration server before configuration is created. When true, triggers are installed as soon as possible, right after configuration tables are created. When false, triggers are installed when the configuration includes one or more group links where this node is the source. A default of true avoids race conditions associated with registering nodes and performing operations before configuration is complete and triggers are installed. (Default: true)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>trigger.capture.ddl.check.trigger.hist</strong></div>
+<p>Disable this property to capture all DDL changes regardless of whether the associated table has a corresponding row in sym_trigger_hist. MS SQL-Server, Oracle and Postgres only. See: trigger.capture.ddl.changes (Default: true)</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>trigger.use.insert.delete.for.primary.key.changes</strong></div>
+<p>For Sybase and SQL Server, if a primary key is changed, this parameter determines if a delete followed by an insert is captured for the row change instead of an update. When set to true, an update will be created if no primary keys are changed or if only one row is changed when a primary key change occurs, otherwise a delete followed by an insert is created for each row updated when a primary key change occurs and more than one row is updated by the SQL statement. If set to false, it will always create an update. This parameter, when changed, requires a restart of the SymmetricDS instance, followed by a rebuild of the triggers. (Default: true)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modified_parameters">Modified Parameters</h3>
+<div class="paragraph">
+<div class="title"><strong>treat.binary.as.lob.enabled</strong></div>
+<p>Whether binary fields should be treated as lobs (Old Default: true) (New Default: false)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Version 3.14.10<br>
+Last updated 2023-10-27 19:57:47 UTC
+</div>
+</div>
+</body>
+</html>
