@@ -1,0 +1,39 @@
+server:
+  port: ${PORT:8080}
+
+logging:
+  level:
+    org.atmosphere: warn
+
+spring:
+  data:
+    rest:
+      basePath: /api/v1
+  datasource:
+    url: jdbc:mysql://localhost:3307/app
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: pass123
+    username: root
+    hikari:
+      jdbc-url: jdbc:mysql://localhost:3307/app
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      password: pass123
+      username: root
+  jpa:
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+
+
+#swagger
+springdoc:
+  swagger-ui.path: /swagger
+  api-docs.path: /api-docs
+  packages-to-scan: com.example.application.rest
+  swagger-ui:
+    tryItOutEnabled: true
+    operationsSorter: method
+    tagsSorter: alpha
+    filter: true
+
