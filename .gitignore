@@ -1,0 +1,5 @@
+/.idea/
+.DS_Store
+Thumbs.db
+/kafka/
+/symmetric-server-3.14.10/tmp/**
