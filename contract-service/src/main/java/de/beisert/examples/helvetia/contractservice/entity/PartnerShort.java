@@ -1,7 +1,6 @@
 package de.beisert.examples.helvetia.contractservice.entity;
 
 import org.springframework.data.rest.core.config.Projection;
-import org.w3c.dom.stylesheets.LinkStyle;
 
 import java.util.List;
 

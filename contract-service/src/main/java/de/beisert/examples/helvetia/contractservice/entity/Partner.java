@@ -1,5 +1,4 @@
 package de.beisert.examples.helvetia.contractservice.entity;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
