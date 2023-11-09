@@ -37,7 +37,8 @@ export class PartnerService {
       method: 'PATCH',
       headers: {
         'Accept': 'application/hal+json',
-        'Content-Type': 'application/hal+json'
+        'Content-Type': 'application/hal+json',
+        'Access-Control-Allow-Methods': 'GET, POST, PATCH, DELETE'
       },
       body: JSON.stringify(partner)
     });

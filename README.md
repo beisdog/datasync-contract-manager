@@ -9,6 +9,7 @@ docker-compose up -d
 # Setup symmetric ds
 ```shell
    cd  symmetric-server-3.14.10/
+   mkdir tmp
    # create initial schema
    bin/dbimport --engine app-000 --format XML --alter-case samples/create_app_schema.xml
    bin/dbimport --engine contract-001 --format XML --alter-case samples/create_contract_schema.xml
@@ -31,5 +32,17 @@ docker-compose up -d
    
    ```
 
+   # Run contract-service
+   ```shell
+   mvn spring-boot:run
+
+   ```
+
+# Swagger
+
+# Start UI
+nvm use 18
+cd contract-ui
+ng serve
 
 

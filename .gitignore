@@ -3,3 +3,4 @@
 Thumbs.db
 /kafka/
 /symmetric-server-3.14.10/tmp/**
+symmetric-server-3.14.10/logs/symmetric.log

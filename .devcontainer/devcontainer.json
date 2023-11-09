@@ -1,0 +1,12 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"cweijan.vscode-mysql-client2",
+				"vscjava.vscode-java-pack"
+			]
+		}
+	}
+}
